@@ -1,0 +1,45 @@
+@import "./components/style/mixins.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $fontfamily;
+  
+  background-color: $bg;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex_center {
+  justify-content: center;
+}
+
+.container {
+  width: $grid-large;
+  margin: auto;
+}
+
+@media (max-width: $grid-large) {
+  .container {
+    width: $grid-medium;
+  }
+}
+
+@media (max-width: $grid-medium) {
+  .container {
+    width: $grid-small;
+  }
+}
+
+@media (max-width: $grid-small) {
+  .container {
+    width: 100%;
+  }
+}

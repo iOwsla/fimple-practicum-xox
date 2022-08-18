@@ -1,0 +1,121 @@
+@import '../../style/mixins.scss';
+
+.games {
+  display: flex;
+  align-items: center;
+
+  .game {
+    margin-top: 100px;
+    padding: 20px;
+    background: #1b1e22;
+    border-radius: 20px;
+    margin-right: 50px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    .description {
+      h1 {
+        color: $white;
+      }
+      p {
+        margin-top: 5px;
+        font-weight: 400;
+        color: $box;
+      }
+    }
+    .show_type {
+      display: flex;
+      position: relative;
+      .shows {
+        margin-top: 50px;
+        display: flex;
+        .box {
+          width: 100px;
+          height: 100px;
+          margin-right: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 6px;
+          border: 1px solid $white;
+          background: $box;
+          margin-top: 30px;
+          color: $white;
+          font-size: 110px;
+          font-weight: 900;
+          &.box_score {
+            color:$score;;
+          }
+        }
+      }
+      margin-bottom: 50px;
+    }
+    .button {
+      display: flex;
+      justify-content: flex-start;
+      button {
+        border-radius: 5px;
+        border: 0;
+        background: $score;;
+        width: 260px !important;
+        height: 50px;
+        margin-right: 50px;
+        cursor: pointer;
+        color: $white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $grid-large) {
+  .games {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    .game {
+      margin: 50px auto;
+      width: calc(100% - 10px);
+      padding: 0;
+      background: none;
+    }
+    .content {
+      .description {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .show_type {
+        flex-direction: column;
+        .line {
+          display: none;
+        }
+        .shows {
+          display: flex;
+          justify-content: space-evenly;
+          margin: 10px;
+          .box {
+            width: 100px;
+            height: 100px;
+            background: $box;
+            margin: 5px;
+          }
+        }
+        margin-bottom: 0;
+      }
+      .button {
+        margin: auto;
+        button {
+          width: 100px !important;
+          height: 45px !important;
+          font-size: 14px;
+          margin: auto 5px;
+        }
+      }
+    }
+  }
+}

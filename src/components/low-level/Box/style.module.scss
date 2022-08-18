@@ -1,0 +1,33 @@
+@import '../../style/mixins.scss';
+
+.box {
+  background: $bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 140px;
+  font-weight: 600;
+  color: $score;
+}
+
+@media (max-width: $grid-large) {
+  .box {
+    background: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 120px;
+    font-weight: 600;
+    color: $score;
+  }
+}
